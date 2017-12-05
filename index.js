@@ -15,6 +15,7 @@ module.exports = exports = class EncodeEnvironmentVariableObjects {
     };
 
     this.hooks = {
+      'before:invoke:local:invoke': this.beforeDeployResources.bind(this),
       'before:deploy:resources': this.beforeDeployResources.bind(this)
     };
   }
